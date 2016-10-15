@@ -9,4 +9,5 @@ function draw(){
 }
 
 draw();
-setTimeout(draw, 1000);
+//「setTimeout(draw, 1000);」=「setInterval(draw, 16);」
+setInterval(draw, 16);
