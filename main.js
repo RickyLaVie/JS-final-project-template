@@ -9,3 +9,4 @@ function draw(){
 }
 
 draw();
+setTimeout(draw, 1000);
