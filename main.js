@@ -11,7 +11,7 @@ function draw(){
    
    ctx.drawImage(bgImg,0,0);
    ctx.drawImage(towerImg,0,0);
-   ctx.drawImage(enemyImg,94,410);
+   ctx.drawImage(enemyImg,95,410);
 }
 
 // draw();
