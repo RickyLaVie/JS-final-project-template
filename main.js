@@ -9,8 +9,8 @@ var enemy = {
    y: 430
 };
 var tower = {
-   x: 500,
-   y: 35
+   x: 543,
+   y: 75
 };
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
