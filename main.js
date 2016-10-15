@@ -8,13 +8,17 @@ var enemy = {
    x: 95,
    y: 430
 };
+var tower = {
+   x: 500,
+   y: 35
+};
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
 
 function draw(){
    
    ctx.drawImage(bgImg,0,0);
-   ctx.drawImage(towerImg,0,0);
+   ctx.drawImage(towerImg,tower.x,tower.y);
    ctx.drawImage(enemyImg,enemy.x,enemy.y);
 }
 
