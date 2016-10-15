@@ -4,6 +4,10 @@ var towerImg = document.createElement("img");
 towerImg.src = "images/tower.png";
 var enemyImg = document.createElement("img");
 enemyImg.src = "images/slime.gif";
+var enemy = {
+   x: 95,
+   y: 430
+};
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
 
@@ -11,7 +15,7 @@ function draw(){
    
    ctx.drawImage(bgImg,0,0);
    ctx.drawImage(towerImg,0,0);
-   ctx.drawImage(enemyImg,95,410);
+   ctx.drawImage(enemyImg,enemy.x,enemy.y);
 }
 
 // draw();
