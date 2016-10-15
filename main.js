@@ -1,5 +1,5 @@
-var bgImgTower = document.createElement("img");
-bgImgTower.src = "images/tower.png";
+var towerImg = document.createElement("img");
+towerImg.src = "images/tower.png";
 var bgImg = document.createElement("img");
 bgImg.src = "images/map.png";
 var enemyImg = document.createElement("img");
@@ -9,7 +9,7 @@ var ctx = canvas.getContext("2d");
 
 function draw(){
    
-   ctx.drawImage(bgImgTower,0,0);
+   ctx.drawImage(towerImg,0,0);
    ctx.drawImage(bgImg,0,0);
    ctx.drawImage(enemyImg,0,0);
 }
