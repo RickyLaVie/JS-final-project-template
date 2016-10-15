@@ -13,7 +13,7 @@ var tower = {
    y: 75
 };
 var canvas = document.getElementById("game-canvas");
-var ctx = canvas.getContext("3d");
+var ctx = canvas.getContext("2d");
 
 function draw(){
    
