@@ -1,8 +1,8 @@
 var bgImg = document.createElement("img");
 bgImg.src = "images/map.png";
-var enemyImg = document.createElement("imge");
+var enemyImg = document.createElement("img");
 enemyImg.src = "images/slime.png";
-var bgImgTower = document.createElement("imgt");
+var bgImgTower = document.createElement("img");
 bgImgTower.src = "images/tower.png";
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
