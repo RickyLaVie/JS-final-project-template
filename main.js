@@ -4,6 +4,8 @@ var towerImg = document.createElement("img");
 towerImg.src = "images/tower.png";
 var enemyImg = document.createElement("img");
 enemyImg.src = "images/slime.gif";
+var buttonImg = document.createElement("img");
+buttonImg.src = "images/tower-btn.png";
 var enemy = {
    x: 95,
    y: 430
@@ -11,6 +13,10 @@ var enemy = {
 var tower = {
    x: 543,
    y: 75
+};
+var btn = {
+   x:9,
+   y:9
 };
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
@@ -20,6 +26,7 @@ function draw(){
    ctx.drawImage(bgImg,0,0);
    ctx.drawImage(towerImg,tower.x,tower.y);
    ctx.drawImage(enemyImg,enemy.x,enemy.y);
+   ctx.drawImage(buttonImg,btn.x,btn.y);
 }
 
 // draw();
