@@ -15,8 +15,8 @@ var tower = {
    y: 75
 };
 var btn = {
-   x:9,
-   y:9
+   x:550,
+   y:435
 };
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
@@ -26,7 +26,7 @@ function draw(){
    ctx.drawImage(bgImg,0,0);
    ctx.drawImage(towerImg,tower.x,tower.y);
    ctx.drawImage(enemyImg,enemy.x,enemy.y);
-   ctx.drawImage(buttonImg,btn.x,btn.y,15,15);
+   ctx.drawImage(buttonImg,btn.x,btn.y,60,60);
 }
 
 // draw();
