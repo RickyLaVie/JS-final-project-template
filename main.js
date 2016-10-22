@@ -18,7 +18,7 @@ var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
 
 $("#game-canvas").on("mousemove",function(event){
-   cusor = {
+   cursor = {
      x: event.offsetX,
      y: event.offsetY
    };
