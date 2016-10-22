@@ -24,6 +24,8 @@ $("#game-canvas").on("mousemove",function(event){
    };
 });
 
+
+
 function draw(){
    
    ctx.drawImage(bgImg,0,0);
