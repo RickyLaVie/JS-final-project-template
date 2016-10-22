@@ -25,6 +25,9 @@ $("#game-canvas").on("mousemove",function(event){
    };
 });
 
+$("#game-canvas").on("click", function(){
+   if( isCollided(cursor.x,cursor.y,640-65, 380-65, 65, 65
+
 function draw(){
    
    ctx.drawImage(bgImg,0,0);
