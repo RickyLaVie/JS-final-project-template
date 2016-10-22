@@ -17,10 +17,6 @@ var btn = {
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
 
-$("#game-canvas").mousemove(function(event){
-   console.log("x:" + event.offsetX + ",y:" + event.offsetY);
-});
-
 $("#game-canvas").on("mousemove",function(event){
    cusor = {
      x: event.offsetX,
@@ -33,13 +29,14 @@ function draw(){
    ctx.drawImage(bgImg,0,0);
    ctx.drawImage(enemyImg,enemy.x,enemy.y);
    ctx.drawImage(buttonImg,btn.x,btn.y,65,65);
-}
-
-function clickBtn(){
    ctx.drawImage(towerImg,cursor.x,cursor.y);
 }
 
-$("#button").on("click",clickBtn);
+// function clickBtn(){
+//    ctx.drawImage(towerImg,cursor.x,cursor.y);
+// }
+
+// $("#button").on("click",clickBtn);
 
 
 // draw();
