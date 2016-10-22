@@ -18,23 +18,35 @@ var btn = {
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
 
-$("#game-canvas").on("mousemove",function(event){
-   cursor = {
-     x: event.offsetX,
-     y: event.offsetY
-   };
-});
-
-$("#game-canvas").on("click", function(){
-   if( isCollided(cursor.x,cursor.y,640-65, 380-65, 65, 65
-
 function draw(){
-   
+   enemy.move();
    ctx.drawImage(bgImg,0,0);
    ctx.drawImage(enemyImg,enemy.x,enemy.y);
    ctx.drawImage(buttonImg,btn.x,btn.y,65,65);
    ctx.drawImage(towerImg,cursor.x,cursor.y);
+   if(isBuilding){
+      ctx.drawImage(towerImg,cursor.x,cursor.y);
+   }
+   ctx.drawImage(towerImg,tower.x,tower.y);
 }
+
+var isBuilding = false;
+var tower = {};
+var cursor = {};
+$("#game-canvas").on("click", function(){
+   if( isCollided(cursor.x,cursor.y,640-64, 480-64, 64, 64)){
+      if(isBuilding){
+         isBuilding = false;
+      }
+      else{
+         isBuilding = true;
+      }
+   }
+   else if(isBuilding){
+      tower.x = cursor.x-cursor.x%32;
+      tower.y = cursor.y-cursor.y%32;
+   }
+});
 
 
 function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight) {
@@ -49,6 +61,12 @@ function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight)
     }
 }
 
+$("#game-canvas").on("mousemove",function(event){
+   cursor = {
+     x: event.offsetX,
+     y: event.offsetY
+   };
+});
 
 // function clickBtn(){
 //    ctx.drawImage(towerImg,cursor.x,cursor.y);
