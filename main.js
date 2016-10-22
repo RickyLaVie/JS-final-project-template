@@ -15,11 +15,6 @@ var btn = {
    y:416
 };
 
-var cursor = {
-   
-   
-};
-
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
 
@@ -30,8 +25,6 @@ $("#game-canvas").on("mousemove",function(event){
    };
 });
 
-
-
 function draw(){
    
    ctx.drawImage(bgImg,0,0);
@@ -39,6 +32,8 @@ function draw(){
    ctx.drawImage(buttonImg,btn.x,btn.y,65,65);
    ctx.drawImage(towerImg,cursor.x,cursor.y);
 }
+
+
 
 // function clickBtn(){
 //    ctx.drawImage(towerImg,cursor.x,cursor.y);
