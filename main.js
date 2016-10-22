@@ -15,8 +15,8 @@ var tower = {
    y: 75
 };
 var btn = {
-   x:550,
-   y:435
+   x:581,
+   y:421
 };
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
