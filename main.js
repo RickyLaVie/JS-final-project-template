@@ -8,7 +8,7 @@ var buttonImg = document.createElement("img");
 buttonImg.src = "images/tower-btn.png";
 var enemy = {
    x: 96,
-   y: 398
+   y: 400
 };
 var btn = {
    x:576,
