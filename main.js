@@ -7,7 +7,7 @@ enemyImg.src = "images/slime.gif";
 var buttonImg = document.createElement("img");
 buttonImg.src = "images/tower-btn.png";
 var enemy = {
-   x: 76,
+   x: 82,
    y: 395
 };
 var btn = {
