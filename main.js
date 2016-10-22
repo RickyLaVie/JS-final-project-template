@@ -7,13 +7,19 @@ enemyImg.src = "images/slime.gif";
 var buttonImg = document.createElement("img");
 buttonImg.src = "images/tower-btn.png";
 var enemy = {
-   x: 82,
+   x: 96,
    y: 395
 };
 var btn = {
    x:576,
    y:416
 };
+
+var cursor = {
+   
+   
+};
+
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
 
