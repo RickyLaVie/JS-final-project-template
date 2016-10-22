@@ -19,7 +19,7 @@ var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
 
 function draw(){
-   enemy.move();
+   
    ctx.drawImage(bgImg,0,0);
    ctx.drawImage(enemyImg,enemy.x,enemy.y);
    ctx.drawImage(buttonImg,btn.x,btn.y,65,65);
@@ -43,8 +43,8 @@ $("#game-canvas").on("click", function(){
       }
    }
    else if(isBuilding){
-      tower.x = cursor.x-cursor.x%32;
-      tower.y = cursor.y-cursor.y%32;
+      tower.x =cursor.x-cursor.x%32;
+      tower.y =cursor.y-cursor.y%32;
    }
 });
 
