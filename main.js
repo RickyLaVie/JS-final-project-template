@@ -26,7 +26,7 @@ function draw(){
    ctx.drawImage(bgImg,0,0);
    ctx.drawImage(towerImg,tower.x,tower.y);
    ctx.drawImage(enemyImg,enemy.x,enemy.y);
-   ctx.drawImage(buttonImg,btn.x,btn.y);
+   ctx.drawImage(buttonImg,btn.x,btn.y,15,15);
 }
 
 // draw();
