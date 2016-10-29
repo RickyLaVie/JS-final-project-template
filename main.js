@@ -1,5 +1,6 @@
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
+var FPS = 60;
 
 var bgImg = document.createElement("img");
 bgImg.src = "images/map.png";
@@ -11,7 +12,13 @@ var buttonImg = document.createElement("img");
 buttonImg.src = "images/tower-btn.png";
 var enemy = {
    x: 96,
-   y: 400
+   y: 400,
+   speedx:0,
+   speedy:60,
+   move: function(){
+      speedx -> change;
+      
+   }
 };
 var btn = {
    x:576,
@@ -68,7 +75,7 @@ function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight)
     }
 }
 
-setInterval(draw, 16);
+setInterval(draw, 1000/FPS);
 
 // function clickBtn(){
 //    ctx.drawImage(towerImg,cursor.x,cursor.y);
