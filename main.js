@@ -24,7 +24,7 @@ function draw(){
    ctx.drawImage(enemyImg,enemy.x,enemy.y);
    ctx.drawImage(buttonImg,btn.x,btn.y,65,65);
    ctx.drawImage(towerImg,cursor.x,cursor.y);
-   if(isBuilding){
+   if(isBuilding &&() ){
       ctx.drawImage(towerImg,cursor.x,cursor.y);
    }
    ctx.drawImage(towerImg,tower.x,tower.y);
@@ -42,7 +42,7 @@ $("#game-canvas").on("click", function(){
          isBuilding = true;
       }
    }
-   else if(isBuilding){
+   else if(isBuilding &&() ){
       tower.x =cursor.x-cursor.x%32;
       tower.y =cursor.y-cursor.y%32;
       isBuilding = false;
