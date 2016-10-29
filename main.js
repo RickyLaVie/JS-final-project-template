@@ -21,9 +21,9 @@ var btn = {
 function draw(){
    
    ctx.drawImage(bgImg,0,0);
-   ctx.drawImage(enemyImg,enemy.x,enemy.y,50,50);
+   ctx.drawImage(enemyImg,enemy.x,enemy.y);
    ctx.drawImage(buttonImg,btn.x,btn.y,65,65);
-   ctx.drawImage(towerImg,cursor.x,cursor.y);
+   ctx.drawImage(towerImg,cursor.x,cursor.y,32,32);
    if(isBuilding ){
       ctx.drawImage(towerImg,cursor.x,cursor.y);
    }
