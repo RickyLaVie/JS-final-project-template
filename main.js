@@ -24,10 +24,10 @@ function draw(){
    ctx.drawImage(enemyImg,enemy.x,enemy.y);
    ctx.drawImage(buttonImg,btn.x,btn.y,65,65);
    ctx.drawImage(towerImg,cursor.x,cursor.y,32,32);
-   if(isBuilding ){
-      ctx.drawImage(towerImg,cursor.x,cursor.y);
+   if(isBuilding){
+      ctx.drawImage(towerImg,cursor.x,cursor.y,32,32);
    }
-   ctx.drawImage(towerImg,tower.x,tower.y);
+   ctx.drawImage(towerImg,tower.x,tower.y,32,32);
 }
 
 var isBuilding = false;
