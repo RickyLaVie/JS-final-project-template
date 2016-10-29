@@ -14,10 +14,10 @@ var enemy = {
    x: 96,
    y: 400,
    speedx:0,
-   speedy:60,
+   speedy:-60,
    move: function(){
-      this.x = this.x + 0,
-      this.y = this.y - 1
+      this.x = this.x + this.speedx/FPS;
+      this.y = this.y + this.speedy/FPS;
       
       
    }
