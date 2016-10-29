@@ -16,8 +16,9 @@ var enemy = {
    speedx:0,
    speedy:60,
    move: function(){
-      speedx -> change.speedx = 0 ;
-      speedy -> change.speedy = 6 ;
+      this.x = 96,
+      this.y = 400-398
+      
       
    }
 };
