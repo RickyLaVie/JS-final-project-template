@@ -28,7 +28,7 @@ var btn = {
 };
 
 function draw(){
-   
+   enemy.move();
    ctx.drawImage(bgImg,0,0);
    ctx.drawImage(enemyImg,enemy.x,enemy.y);
    ctx.drawImage(buttonImg,btn.x,btn.y,65,65);
