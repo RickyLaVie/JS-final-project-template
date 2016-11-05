@@ -12,14 +12,13 @@ var buttonImg = document.createElement("img");
 buttonImg.src = "images/tower-btn.png";
 
 // var enemyPath = [
-//    {x: , y:},
-//    {x: , y:},
-//    {x: , y:},
-//    {x: , y:},
-//    {x: , y:},
-//    {x: , y:},
-//    {x: , y:},
-//    {x: , y:},
+//    {x:96, y:63},
+//    {x:384, y:63},
+//    {x:384, y:192},
+//    {x:224, y:192},
+//    {x:224, y:320},
+//    {x:544, y:320},
+//    {x:544, y:97},
 // ];
 
 var enemy = {
