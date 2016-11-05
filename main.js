@@ -10,6 +10,18 @@ var enemyImg = document.createElement("img");
 enemyImg.src = "images/slime.gif";
 var buttonImg = document.createElement("img");
 buttonImg.src = "images/tower-btn.png";
+
+// var enemyPath = [
+//    {x: , y:},
+//    {x: , y:},
+//    {x: , y:},
+//    {x: , y:},
+//    {x: , y:},
+//    {x: , y:},
+//    {x: , y:},
+//    {x: , y:},
+// ];
+
 var enemy = {
    x: 96,
    y: 400,
@@ -28,7 +40,7 @@ var btn = {
 };
 
 function draw(){
-   enemy.move();
+//    enemy.move();
    ctx.drawImage(bgImg,0,0);
    ctx.drawImage(enemyImg,enemy.x,enemy.y);
    ctx.drawImage(buttonImg,btn.x,btn.y,65,65);
