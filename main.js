@@ -12,25 +12,49 @@ var buttonImg = document.createElement("img");
 buttonImg.src = "images/tower-btn.png";
 
 var enemyPath = [
-   {x:96, y:63},
-   {x:384, y:63},
-   {x:384, y:192},
-   {x:224, y:192},
-   {x:224, y:320},
-   {x:544, y:320},
-   {x:544, y:97},
+   {x:96, y:63},    // ---> enemyPath = [0];
+   {x:384, y:63},   // ---> enemyPath = [1];
+   {x:384, y:192},  // ---> enemyPath = [2];
+   {x:224, y:192},  // ---> enemyPath = [3];
+   {x:224, y:320},  // ---> enemyPath = [4];
+   {x:544, y:320},  // ---> enemyPath = [5];
+   {x:544, y:97},   // ---> enemyPath = [6];
 ];
 
 var enemy = {
+   pathDes:0,  // -----is equal to-----> enemy.pathDes = 0;
    x: 96,
    y: 400,
    speedx:0,
-   speedy:-60,
+   speedy:-64,
+   speed:64,
    move: function(){
-      this.x = this.x + this.speedx/FPS;
-      this.y = this.y + this.speedy/FPS;
-      
-      
+      if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y,this.x,this.y, this.speed/FPS, this.speed/FPS)){
+         console.log("gogog")}
+      this.x = enemyPath[this.pathDes].x;
+      this.y = enemyPath[this.pathDes].y;
+      this.pathDes++; // 使array裡的數字+1  ；即 [0]--(+1)-->[0+1]--->[1]
+      if (this.x>enemyPath[this.pathDes].x){
+         this.speedx=-64;
+         this.speedy=0;
+      }
+      else if (this.x<enemyPath[this.pathDes].x){
+         this.speedx=64;
+         this.speedy=0;
+      }
+      else if (this.y<enemyPath[this.pathDes].y){
+         this.speedx=0;
+         this.speedy=64;
+      }
+      else if (this.y>enemyPath[this.pathDes].y){
+         this.speedx=0;
+         this.speedy=-64;
+      }
+      else {
+         this.speedx=0;
+         this.speedy=-64;
+      }
+
    }
 };
 var btn = {
