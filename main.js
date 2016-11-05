@@ -35,7 +35,6 @@ var enemy = {
       this.y=enemyPath[this.pathDes].y;
       this.pathDes++; // 使array裡的數字+1  ；即 [0]--(+1)-->[0+1]--->[1]
       if (this.x>enemyPath[this.pathDes].x){
-         console.log("gogog");
          this.speedx=-64;
          this.speedy=0;
       }
