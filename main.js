@@ -54,9 +54,11 @@ var enemy = {
          this.speedx=0;
          this.speedy=-64;
       }
-
+      this.x = this.x + this.speedx/FPS;
+      this.y = this.y + this.speedy/FPS;
    }
 };
+
 var btn = {
    x:576,
    y:416
