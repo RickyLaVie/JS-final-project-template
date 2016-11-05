@@ -31,8 +31,8 @@ var enemy = {
    move: function(){
       if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y,this.x,this.y, this.speed/FPS, this.speed/FPS)){
          console.log("gogog")}
-      this.x = enemyPath[this.pathDes].x;
-      this.y = enemyPath[this.pathDes].y;
+      this.x=enemyPath[this.pathDes].x;
+      this.y=enemyPath[this.pathDes].y;
       this.pathDes++; // 使array裡的數字+1  ；即 [0]--(+1)-->[0+1]--->[1]
       if (this.x>enemyPath[this.pathDes].x){
          this.speedx=-64;
@@ -55,8 +55,8 @@ var enemy = {
          this.speedy=-64;
       }
       else {
-         this.x = this.x + this.speedx/FPS;
-         this.y = this.y + this.speedy/FPS;
+         this.x=this.x+this.speedx/FPS;
+         this.y=this.y+this.speedy/FPS;
       }
    }
    
