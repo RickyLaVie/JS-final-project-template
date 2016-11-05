@@ -50,10 +50,10 @@ var enemy = {
          this.speedx=0;
          this.speedy=-64;
       }
-      else {
-         this.speedx=0;
-         this.speedy=-64;
-      }
+//       else {
+//          this.speedx=0;
+//          this.speedy=-64;
+//       }
 
    }
 };
