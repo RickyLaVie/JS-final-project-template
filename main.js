@@ -27,7 +27,7 @@ var enemy = {
    y: 416,
    speedX:0,
    speedY:-64,
-//    speed:64,
+   speed:64,
    move: function(){
       if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y,this.x,this.y, this.speed/FPS, this.speed/FPS)){
 //          console.log("gogog")
@@ -55,8 +55,8 @@ var enemy = {
 //          this.speedY=-64;
 //       }
       else {
-         this.x=this.x+this.speedx/FPS;
-         this.y=this.y+this.speedy/FPS;
+         this.x=this.x+this.speedX/FPS;
+         this.y=this.y+this.speedY/FPS;
       }
    }
    
