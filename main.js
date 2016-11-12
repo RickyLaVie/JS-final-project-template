@@ -22,17 +22,17 @@ var enemyPath = [
 ];
 
 var enemy = {
-   pathDes: 0,  // -----is equal to-----> enemy.pathDes = 0;
-   x: 96,
-   y: 416,
+   x:96,
+   y:416,
    speedX:0,
    speedY:-64,
+   pathDes: 0,  // -----is equal to-----> enemy.pathDes = 0;
    move: function(){
       if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y,this.x,this.y, 64/FPS, 64/FPS)){
 //          console.log("gogog")
       this.x=enemyPath[this.pathDes].x;
       this.y=enemyPath[this.pathDes].y;
-      this.pathDes++; // 使array裡的數字+1  ；即 [0]--(+1)-->[0+1]--->[1]
+      this.pathDes++;  // 使array裡的數字+1  ；即 [0]--(+1)-->[0+1]--->[1]
       if (this.x>enemyPath[this.pathDes].x){
          this.speedX=-64;
          this.speedY=0;
@@ -49,21 +49,16 @@ var enemy = {
          this.speedX=0;
          this.speedY=-64;
       }
-//       else {
-//          this.speedX=0;
-//          this.speedY=-64;
-//       }
       else {
          this.x=this.x+this.speedX/FPS;
          this.y=this.y+this.speedY/FPS;
       }
    }
-   
 };
 
-var btn = {
-   x:576,
-   y:416
+var btn={
+   x: 576,
+   y: 416,
 };
 
 function draw(){
