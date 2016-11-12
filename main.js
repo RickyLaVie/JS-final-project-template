@@ -72,7 +72,7 @@ function draw(){
    }
    for (var i=0; i<enemies.length;i++){
       enemies[i].move();
-      ctx.drawImage(enemy,enemies[i].x,enemies[i].y);
+      ctx.drawImage(enemyImg,enemies[i].x,enemies[i].y);
    }
    enemy.move();
    ctx.drawImage(enemyImg,enemy.x,enemy.y);
