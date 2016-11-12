@@ -22,15 +22,15 @@ var enemyPath = [
 ];
 
 var enemy = {
-   pathDes:0,  // -----is equal to-----> enemy.pathDes = 0;
+   pathDes: 0,  // -----is equal to-----> enemy.pathDes = 0;
    x: 96,
    y: 416,
    speedX:0,
    speedY:-64,
-   speed:64,
+//    speed:64,
    move: function(){
       if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y,this.x,this.y, this.speed/FPS, this.speed/FPS)){
-         console.log("gogog")}
+//          console.log("gogog")
       this.x=enemyPath[this.pathDes].x;
       this.y=enemyPath[this.pathDes].y;
       this.pathDes++; // 使array裡的數字+1  ；即 [0]--(+1)-->[0+1]--->[1]
@@ -68,8 +68,8 @@ var btn = {
 };
 
 function draw(){
-   enemy.move();
    ctx.drawImage(bgImg,0,0);
+   enemy.move();
    ctx.drawImage(enemyImg,enemy.x,enemy.y);
    ctx.drawImage(buttonImg,btn.x,btn.y,65,65);
    if(isBuilding){
