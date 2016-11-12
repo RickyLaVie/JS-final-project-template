@@ -20,16 +20,16 @@ var enemyPath = [
    {x:544, y:320},  // ---> enemyPath = [5];
    {x:544, y:97}    // ---> enemyPath = [6];
 ];
-
-var enemy = {
-   x:96,
-   y:416,
-   speedX:0,
-   speedY:-64,
-   pathDes: 0,  // -----is equal to-----> enemy.pathDes = 0;
-   move: function(){
-      if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y,this.x,this.y, 64/FPS, 64/FPS)){
-         console.log("gogog")
+function Enemy() {
+   this.x = 96;
+   this.y = 416;
+   this.speedX = 0;
+   this.speedY = -64;
+   this.speed = 64;
+   this.pathDes = 0;
+   this.move = function(){
+      if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y,this.x,this.y, this.speed/FPS, this.speed/FPS)){
+         
       this.x=enemyPath[this.pathDes].x;
       this.y=enemyPath[this.pathDes].y;
       this.pathDes++;  // 使array裡的數字+1  ；即 [0]--(+1)-->[0+1]--->[1]
@@ -53,9 +53,10 @@ var enemy = {
          this.x=this.x+this.speedX/FPS;
          this.y=this.y+this.speedY/FPS;
       }
+      };
    }
-}};
-
+}
+var enemy = new Enemy();
 var btn={
    x: 576,
    y: 416,
