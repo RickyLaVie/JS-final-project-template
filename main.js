@@ -18,15 +18,15 @@ var enemyPath = [
    {x:224, y:192},  // ---> enemyPath = [3];
    {x:224, y:320},  // ---> enemyPath = [4];
    {x:544, y:320},  // ---> enemyPath = [5];
-   {x:544, y:97},   // ---> enemyPath = [6];
+   {x:544, y:97}    // ---> enemyPath = [6];
 ];
 
 var enemy = {
    pathDes:0,  // -----is equal to-----> enemy.pathDes = 0;
    x: 96,
-   y: 400,
-   speedx:0,
-   speedy:-64,
+   y: 416,
+   speedX:0,
+   speedY:-64,
    speed:64,
    move: function(){
       if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y,this.x,this.y, this.speed/FPS, this.speed/FPS)){
@@ -35,24 +35,24 @@ var enemy = {
       this.y=enemyPath[this.pathDes].y;
       this.pathDes++; // 使array裡的數字+1  ；即 [0]--(+1)-->[0+1]--->[1]
       if (this.x>enemyPath[this.pathDes].x){
-         this.speedx=-64;
-         this.speedy=0;
+         this.speedX=-64;
+         this.speedY=0;
       }
       else if (this.x<enemyPath[this.pathDes].x){
-         this.speedx=64;
-         this.speedy=0;
+         this.speedX=64;
+         this.speedY=0;
       }
       else if (this.y<enemyPath[this.pathDes].y){
-         this.speedx=0;
-         this.speedy=64;
+         this.speedX=0;
+         this.speedY=64;
       }
 //       else if (this.y>enemyPath[this.pathDes].y){
-//          this.speedx=0;
-//          this.speedy=-64;
+//          this.speedX=0;
+//          this.speedY=-64;
 //       }
       else {
-         this.speedx=0;
-         this.speedy=-64;
+         this.speedX=0;
+         this.speedY=-64;
       }
       else {
          this.x=this.x+this.speedx/FPS;
