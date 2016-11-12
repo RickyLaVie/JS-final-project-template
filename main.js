@@ -58,6 +58,7 @@ function Enemy() {
    }
 };
 
+var enemy=new Enemy();
 var btn={
    x: 576,
    y: 416,
