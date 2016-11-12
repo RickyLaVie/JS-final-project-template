@@ -29,7 +29,7 @@ var enemy = {
    pathDes: 0,  // -----is equal to-----> enemy.pathDes = 0;
    move: function(){
       if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y,this.x,this.y, 64/FPS, 64/FPS)){
-//          console.log("gogog")
+         console.log("gogog")
       this.x=enemyPath[this.pathDes].x;
       this.y=enemyPath[this.pathDes].y;
       this.pathDes++;  // 使array裡的數字+1  ；即 [0]--(+1)-->[0+1]--->[1]
