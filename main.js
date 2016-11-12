@@ -54,8 +54,12 @@ function Enemy() {
          this.y=this.y+this.speedY/FPS;
       }
    }
-}
-var enemy = new Enemy();
+};
+
+var enemies = [];
+
+var clock = 0;
+
 var btn={
    x: 576,
    y: 416,
@@ -63,6 +67,11 @@ var btn={
 
 function draw(){
    ctx.drawImage(bgImg,0,0);
+   
+   if (clock%80==0){
+       var newEnemy = new Enemy();
+       enemies.push(newEnemy);
+   }
    enemy.move();
    ctx.drawImage(enemyImg,enemy.x,enemy.y);
    ctx.drawImage(buttonImg,btn.x,btn.y,65,65);
@@ -70,6 +79,7 @@ function draw(){
       ctx.drawImage(towerImg,cursor.x,cursor.y,32,32);
    }
    ctx.drawImage(towerImg,tower.x,tower.y,32,32);
+   clock++;
 }
 
 var isBuilding = false;
