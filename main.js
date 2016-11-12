@@ -1,6 +1,8 @@
 var canvas = document.getElementById("game-canvas");
 var ctx = canvas.getContext("2d");
 var FPS = 60;
+var clock = 0;
+var enemies = [];
 
 var bgImg = document.createElement("img");
 bgImg.src = "images/map.png";
@@ -56,10 +58,6 @@ function Enemy() {
    }
 };
 
-var enemies = [];
-
-var clock = 0;
-
 var btn={
    x: 576,
    y: 416,
@@ -67,7 +65,6 @@ var btn={
 
 function draw(){
    ctx.drawImage(bgImg,0,0);
-   
    if (clock%80==0){
        var newEnemy = new Enemy();
        enemies.push(newEnemy);
