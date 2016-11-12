@@ -70,6 +70,10 @@ function draw(){
        var newEnemy = new Enemy();
        enemies.push(newEnemy);
    }
+   for (var i=0; i<enemies.length;i++){
+      enemies[i].move();
+      ctx.drawImage(enemy,enemies[i].x,enemies[i].y);
+   }
    enemy.move();
    ctx.drawImage(enemyImg,enemy.x,enemy.y);
    ctx.drawImage(buttonImg,btn.x,btn.y,65,65);
