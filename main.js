@@ -9,7 +9,7 @@ bgImg.src = "images/map.png";
 var towerImg = document.createElement("img");
 towerImg.src = "images/Magma.png";
 var enemyImg = document.createElement("img");
-enemyImg.src = "images/slime.gif";
+enemyImg.src = "images/君卿.png";
 var buttonImg = document.createElement("img");
 buttonImg.src = "images/tower-btn.png";
 
@@ -75,7 +75,7 @@ function draw(){
       ctx.drawImage(enemyImg,enemies[i].x,enemies[i].y);
    }
    enemy.move();
-   ctx.drawImage(enemyImg,enemy.x,enemy.y);
+   ctx.drawImage(enemyImg,enemy.x,enemy.y,32,32);
    ctx.drawImage(buttonImg,btn.x,btn.y,65,65);
    if(isBuilding){
       ctx.drawImage(towerImg,cursor.x,cursor.y,32,32);
