@@ -221,7 +221,7 @@ function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight)
 
 function gameover(){
 	ctx.textAlign = "center";
-	ctx.font = "64px Gochi Hand";
+	ctx.font = "64px Arial";
 	ctx.fillText("GAME OVER", c.width/2, c.height/2-96);
 	ctx.font = "48px Arial";
 	ctx.fillText("you got", c.width/2, c.height/2-32);
