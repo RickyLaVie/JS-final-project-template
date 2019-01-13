@@ -1,3 +1,11 @@
+var bgImg = document.createElement("img");
+bgImg.src = "images/map.png";
+var towerImg = document.createElement("img");
+towerImg.src = "images/Magma.png";
+var enemyImg = document.createElement("img");
+enemyImg.src = "images/Arcane.png";
+var towerButtonImg = document.createElement("img");
+towerButtonImg.src = "images/tower-btn.png";
 
 
 var GAME_TICKER;
