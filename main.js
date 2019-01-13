@@ -1,3 +1,4 @@
+var FPS = 60;
 var bgImg = document.createElement("img");
 bgImg.src = "images/map.png";
 var towerImg = document.createElement("img");
@@ -162,9 +163,9 @@ function init(){
 	ctx.font = "24px Arial";
 	ctx.fillStyle = "white";
 
-	bgImg = document.getElementById("bg-img");
-	towerImg = document.getElementById("tower-img");
-	towerButtonImg = document.getElementById("tower-btn-img");
+	//bgImg = document.getElementById("bg-img");
+	//towerImg = document.getElementById("tower-img");
+	//towerButtonImg = document.getElementById("tower-btn-img");
 	slimeImg = document.getElementById("slime-img");
 	crosshairImg = document.getElementById("crosshair-img");
 	cannonballImg = document.getElementById("cannonball-img");
