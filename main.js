@@ -1,7 +1,4 @@
-var canvas = document.getElementById("game-canvas");
-var ctx = canvas.getContext("2d");
 var FPS = 60;
-var clock = 0;
 var enemies = [];
 
 var bgImg = document.createElement("img");
