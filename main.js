@@ -1,21 +1,14 @@
-var FPS = 60;
-var enemies = [];
 
-var bgImg = document.createElement("img");
-bgImg.src = "images/map.png";
-var towerImg = document.createElement("img");
-towerImg.src = "images/Magma.png";
-var enemyImg = document.createElement("img");
-enemyImg.src = "images/君卿.png";
-var towerButtonImg = document.createElement("img");
-towerButtonImg.src = "images/tower-btn.png";
 
 var GAME_TICKER;
 
 var c, ctx;
+var bgImg, towerImg, towerButtonImg;
+var towerButton;
 var cursor;
 var isBuilding = false;
 var towers = [];
+var enemies = [];
 var cannonBalls = [];
 var enemySpawningTime = 50;
 var enemyPath = [
