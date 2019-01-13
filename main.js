@@ -11,7 +11,6 @@ towerButtonImg.src = "images/tower-btn.png";
 var GAME_TICKER;
 
 var c, ctx;
-var bgImg, towerImg, towerButtonImg;
 var towerButton;
 var cursor;
 var isBuilding = false;
