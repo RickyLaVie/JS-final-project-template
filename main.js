@@ -26,6 +26,7 @@ var enemyUpdatePeriod = 200;
 var score = 0;
 
 
+
 var Tower = function(){
 	this.x = parseInt(cursor.x/32)*32;
 	this.y = parseInt(cursor.y/32)*32;
@@ -45,6 +46,7 @@ var Tower = function(){
 				return;
 			}
 		}
+		
 		this.aimingEnemyId = null;
 	};
 	this.upgrade = function(){
@@ -88,6 +90,7 @@ var ConnonBall = function(tower){
 			this.hitted =  isCollided(this.x, this.y, enemies[_i].x, enemies[_i].y, enemies[_i].width, enemies[_i].height );
 			if (this.hitted) {
 				enemies[_i].hp -= this.damage;
+				
 				break;
 			}
 		}
@@ -140,6 +143,7 @@ var Enemy = function(){
 		}
 	};
 }
+
 
 
 $(window).load(function(){
