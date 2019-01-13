@@ -1,17 +1,7 @@
-var FPS = 60;
-var bgImg = document.createElement("img");
-bgImg.src = "images/map.png";
-var towerImg = document.createElement("img");
-towerImg.src = "images/Magma.png";
-var enemyImg = document.createElement("img");
-enemyImg.src = "images/Arcane.png";
-var towerButtonImg = document.createElement("img");
-towerButtonImg.src = "images/tower-btn.png";
-
-
 var GAME_TICKER;
 
 var c, ctx;
+var bgImg, towerImg, towerButtonImg;
 var towerButton;
 var cursor;
 var isBuilding = false;
@@ -163,9 +153,9 @@ function init(){
 	ctx.font = "24px Arial";
 	ctx.fillStyle = "white";
 
-	//bgImg = document.getElementById("bg-img");
-	//towerImg = document.getElementById("tower-img");
-	//towerButtonImg = document.getElementById("tower-btn-img");
+	bgImg = document.getElementById("bg-img");
+	towerImg = document.getElementById("tower-img");
+	towerButtonImg = document.getElementById("tower-btn-img");
 	slimeImg = document.getElementById("slime-img");
 	crosshairImg = document.getElementById("crosshair-img");
 	cannonballImg = document.getElementById("cannonball-img");
